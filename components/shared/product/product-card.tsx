@@ -28,7 +28,8 @@ export default function ProductCard({ product }: { product: Product }) {
           <p>{product.rating} Stars</p>
 
           {product.stock > 0 ? (
-            <ProductPrice value={product.price} />
+            <ProductPrice value={+product.price} />
+            //<p>CORREGIR</p>
           ) : (
             <p className="text-destructive">Out of Stock</p>
           )}
