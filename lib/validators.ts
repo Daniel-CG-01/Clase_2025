@@ -1,4 +1,9 @@
 import { z } from 'zod';
+import { formatNumberWithDecimal } from './utils';
+
+const currency = z.string().refine(
+        (value) => /^d+(\.\d{2})?$/.test(formatNumberWithDecimal(Number(value)))
+    )
 
 
 export const insertProductSchema = z.object({
@@ -8,5 +13,8 @@ export const insertProductSchema = z.object({
     brand: z.string().min(3,'brand must be at least 3 chars'),
     description: z.string().min(3,'description must be at least 3 chars'),
     stock: z.coerce.number(),
-    images: z.array(z.string()).min(1,'include at least 1 image for the product')
+    images: z.array(z.string()).min(1,'include at least 1 image for the product'),
+    isFeatured: z.boolean(),
+    banner: z.string().nullable(),
+    price: currency
 });
