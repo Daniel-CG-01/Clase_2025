@@ -5,8 +5,8 @@ export const APP_DESCRIPTION = process.env.NEXT_PUBLIC_APP_DESCRIPTION || "Este 
 export const SERVER_URL = process.env.NEXT_PUBLIC_SERVER_URL || "https://localhost:3000"
 
 export const signUpDefaultValues ={
-    name: "alej",
-    email: "alejandropm06@gmail.com",
-    password:"a",
+    name: "daniel",
+    email: "daniel@gmail.com",
+    password:"1234",
     phone: "123456789"
 }

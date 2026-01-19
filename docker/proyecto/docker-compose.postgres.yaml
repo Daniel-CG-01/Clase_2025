@@ -4,8 +4,8 @@ services:
     restart: always
     environment:
       POSTGRES_DB: prostore
-      POSTGRES_USER: alej
-      POSTGRES_PASSWORD: a
+      POSTGRES_USER: daniel
+      POSTGRES_PASSWORD: 1234
     ports:
       - "5432:5432"
     networks:
