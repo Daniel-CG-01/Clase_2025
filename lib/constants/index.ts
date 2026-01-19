@@ -7,5 +7,6 @@ export const SERVER_URL = process.env.NEXT_PUBLIC_SERVER_URL || "https://localho
 export const signUpDefaultValues ={
     name: "alej",
     email: "alejandropm06@gmail.com",
-    password:"a"
+    password:"a",
+    phone: "123456789"
 }
