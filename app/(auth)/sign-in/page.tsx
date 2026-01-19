@@ -1,7 +1,36 @@
 import React from 'react'
+import { Metadata } from 'next'
+import { APP_NAME } from '@/lib/constants'
+import Image  from 'next/image'
+import Link from 'next/link'
+import CredentialsSignInForm from '@/components/auth/credentials-sign-in-form'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+
+export const metadata:Metadata = {
+    title: "Sign-In",
+}
 
 export default function SignInPage() {
   return (
-    <div>SignInPage</div>
+    <div className='w-full max-w-md mx-auto'>
+        <Card>
+            <CardHeader className='space-y-4'>
+                <Link href={"/"} className='flex-center'>
+                    <Image 
+                    src="/images/logo.svg"
+                    alt={`${APP_NAME} logo`}
+                    width={50}
+                    height={50}
+                    priority
+                    />
+                </Link>
+                <CardTitle className='text-center'> Sign In </CardTitle>
+                <CardDescription className='text-center'> Sign in with your account</CardDescription>
+            </CardHeader>
+            <CardContent>
+                <CredentialsSignInForm />
+            </CardContent>
+        </Card>
+    </div>
   )
 }
