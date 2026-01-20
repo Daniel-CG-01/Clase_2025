@@ -12,6 +12,7 @@ export default function CredentialsSignUpForm() {
     const formData = new FormData(evt.currentTarget);
     const name = String(formData.get("name"));
     const email = String(formData.get("email"));
+    const phone = String(formData.get("phone"));
     const password = String(formData.get("password"));
     //Comprobaciones de los campos del formulario
     if(!name || !password || !email) return;
@@ -19,6 +20,7 @@ export default function CredentialsSignUpForm() {
     await authClient.signUp.email(
       {
         email,
+        phone,
         password,
         name
       },
