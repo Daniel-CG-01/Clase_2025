@@ -26,6 +26,7 @@ CREATE TABLE "user" (
     "emailVerified" BOOLEAN NOT NULL DEFAULT false,
     "image" TEXT,
     "phone" TEXT,
+    "role" TEXT DEFAULT 'user',
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
 
